@@ -9,25 +9,25 @@ let emptyArray = []
 let showText = document.getElementById("showText")
 
 let sumOfAll = 0
+let i = 0
+
 
 while (sumOfAll < 50) {
-
-    for(let i = 0; i < emptyArray.length; i++){
-        sumOfAll += emptyArray[i]
-    }
     
     let number = prompt('Please insert a number:')
 
     let validNumber = parseInt(number)
 
-    emptyArray.push(validNumber)
-
-    showText.classList.remove("d-none")
-
-    console.log(emptyArray)
+    if(validNumber > (50 - sumOfAll)){
+        alert(`You can only insert a max number of ${50 - sumOfAll}`)
+    } else {
+        emptyArray.push(validNumber)
+        sumOfAll += emptyArray[i]
+        showText.classList.remove("d-none")
+        console.log(emptyArray)
+    }
 
     sumOfAll++; 
 
-   
 }
 
