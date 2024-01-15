@@ -35,10 +35,10 @@ btnCheck.addEventListener("click", function(){
 
     console.log(+numberValue)
 
-    +numberValue === 0 
+    let i = +numberValue
     
     
-    while(+numberValue < 100){
+    while(i !== 100){
 
         if(+numberValue > numberToGuess){
             divNumber.innerHTML = 'The number is too high'
@@ -48,7 +48,7 @@ btnCheck.addEventListener("click", function(){
             divNumber.innerHTML = 'The number is the same'
         }
 
-        +numberValue++
+        i++
     }
 
 })
